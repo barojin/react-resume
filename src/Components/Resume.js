@@ -34,6 +34,7 @@ class Resume extends Component {
           <h3>{work.company}</h3>
           <p className="info">
             {work.title}
+            <h1>{work.years}</h1>
             <span>&bull;</span> <em className="date">{work.years}</em>
           </p>
           <p>{work.description}</p>

@@ -1,0 +1,54 @@
+type Blog @model {
+  id: ID!
+  name: String!
+  posts: [Post] @connection(keyName: "byBlog", fields: ["id"])
+}
+
+type Post @model @key(name: "byBlog", fields: ["blogID"]) {
+  id: ID!
+  title: String!
+  blogID: ID!
+  blog: Blog @connection(fields: ["blogID"])
+  comments: [Comment] @connection(keyName: "byPost", fields: ["id"])
+}
+
+type Comment @model @key(name: "byPost", fields: ["postID", "content"]) {
+  id: ID!
+  postID: ID!
+  post: Post @connection(fields: ["postID"])
+  content: String!
+}
+
+type Educations @model{
+  id: ID!
+  school: String
+  degree: String
+  graduated_date: String
+  courses: String
+}
+
+type Experiences @model{
+  id: ID!
+  company: String
+  job_title: String
+  years: String
+  address: [Address]
+  descriptions: [String]
+}
+
+type Works @model{
+  id: ID!
+  title: String
+  descriptions: [String]
+  years: String
+  github: String
+  image: String
+}
+
+type Address @model{
+  id: ID!
+  street: String
+  city: String
+  state: String
+  zip: String
+}
