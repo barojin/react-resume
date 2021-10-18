@@ -27,3 +27,6 @@ npm start
 ```shell
 npm run build
 ```
+
+### Reference
+https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react

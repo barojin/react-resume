@@ -22,7 +22,7 @@
 /* a. General Styles
 /* ------------------------------------------------------------------ */
 
-body { background: #0f0f0f; }
+body { background: #000000; }
 
 /* ------------------------------------------------------------------ */
 /* b. Header Styles
@@ -33,7 +33,7 @@ header {
    height: 800px;
    min-height: 500px;
    width: 100%;
-   
+
    text-align: center;
    overflow: hidden;
 }
@@ -174,7 +174,7 @@ ul#nav li a {
 }
 
 ul#nav li a:active { background-color: transparent !important; }
-ul#nav li.current a { color: #fe6928; }
+ul#nav li.current a { color: gold; }
 
 
 /* ------------------------------------------------------------------ */
@@ -182,7 +182,7 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #about {
-   background: #000524;
+   background: #000000;
    padding-top: 96px;
    padding-bottom: 66px;
    overflow: hidden;
@@ -231,7 +231,7 @@ ul#nav li.current a { color: #fe6928; }
 /* ------------------------------------------------------------------ */
 
 #resume {
-   background: #fff;
+   background: #000000;
    padding-top: 90px;
    padding-bottom: 72px;
    overflow: hidden;
@@ -246,11 +246,13 @@ ul#nav li.current a { color: #fe6928; }
    letter-spacing: 1px;
 }
 #resume h1 span {
-   border-bottom: 3px solid #0762f9;
+   border-bottom: 3px solid gold;
    padding-bottom: 6px;
+   color: white;
 }
 #resume h3 {
    font: 25px/30px 'opensans-bold', sans-serif;
+   color: white;
 }
 
 #resume .header-col { padding-top: 9px; }
@@ -263,7 +265,7 @@ ul#nav li.current a { color: #fe6928; }
 }
 #resume .info {
    font: 16px/24px 'librebaskerville-italic', serif;
-   color: #6E7881;
+   color: #ffffff;
    margin-bottom: 18px;
    margin-top: 9px;
 }
@@ -276,6 +278,9 @@ ul#nav li.current a { color: #fe6928; }
    margin-top: 6px;
 }
 
+#resume p {
+  color: white;
+}
 /*----------------------------------------------*/
 /*	Skill Bars
 /*----------------------------------------------*/
@@ -1011,7 +1016,7 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 .social .btn{
    padding-left: 30px;
-   padding-right: 30px; 
+   padding-right: 30px;
 }
 .social .btn i{
    margin-right: 15px;
