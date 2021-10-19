@@ -28,35 +28,20 @@
 
 ### Link Admin UI with the current application in Amplify CLI
 - https://docs.amplify.aws/console/adminui/extend-cli/#to-configure-the-amplify-cli-for-use-without-an-aws-account
-# React Nice Resume :page_with_curl:
 
-### [LIVE DEMO](https://nordicgiant2.github.io/react-nice-resume-page/index.html)
-
-![img](https://github.com/nordicgiant2/react-nice-resume/blob/master/public/images/img.jpg?raw=true)
-
-# About [`particles-bg`](https://github.com/lindelof/particles-bg) Library
-#### This project uses the react particle background component library [https://github.com/lindelof/particles-bg](https://github.com/lindelof/particles-bg). It's very simple. Anyone can be a Musketeer with it.
-
-![img](https://github.com/lindelof/particles-bg/raw/master/image/03.jpg?raw=true)
-
-# Description
-This project forks from [https://github.com/tbakerx/react-resume-template](https://github.com/tbakerx/react-resume-template), I made some modifications and adjustments, thanks to the [author](https://github.com/tbakerx).
-
-![img](https://github.com/nordicgiant2/react-nice-resume/blob/master/public/images/img2.jpg?raw=true)
-
-# Run Project
-### 1. Clone the project
-
-### 2. Run the project
-```shell
-npm i
-npm start
+# Error logs
+1.
 ```
-
-### 3. Build
-```shell
-npm run build
+...
+2021-10-19T18:04:33.716Z [INFO]: Failed to compile.
+2021-10-19T18:04:33.716Z [INFO]: ./src/index.js
+                                 Cannot find file './aws-exports' in './src'.
+...
 ```
+- Need to set up CI/CD of the front end and backend
+
+- ref: https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-three/?e=gs2020&p=build-a-react-app-two
+
 
 ### Reference
 https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
