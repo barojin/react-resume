@@ -222,8 +222,8 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
-                "Country": {
-                    "name": "Country",
+                "country": {
+                    "name": "country",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
@@ -654,6 +654,13 @@ export const schema = {
                         "targetName": "resumeAddressId"
                     }
                 },
+                "description": {
+                    "name": "description",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -699,5 +706,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "55ae26b31834eac23fcf09e4d44d4e3f"
+    "version": "2092f5cbf5bf339c74f6cc18f12b617b"
 };

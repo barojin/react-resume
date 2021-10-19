@@ -58,7 +58,7 @@ export declare class Address {
   readonly street?: string;
   readonly city?: string;
   readonly state?: string;
-  readonly Country?: string;
+  readonly country?: string;
   readonly zip?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
@@ -112,6 +112,7 @@ export declare class Resume {
   readonly Experiences?: (Experience | null)[];
   readonly Projects?: (Project | null)[];
   readonly Address?: Address;
+  readonly description?: string;
   readonly createdAt?: string;
   readonly updatedAt?: string;
   constructor(init: ModelInit<Resume, ResumeMetaData>);

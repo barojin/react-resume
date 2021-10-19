@@ -1,0 +1,67 @@
+type Skill @model @auth(rules: [{allow: public}]) @key(name: "byResume", fields: ["resumeID"]) {
+  id: ID!
+  name: String
+  level: String
+  resumeID: ID
+}
+
+type Education @model @auth(rules: [{allow: public}]) @key(name: "byResume", fields: ["resumeID"]) {
+  id: ID!
+  school: String
+  degree: String
+  graduated_date: String
+  courses: String
+  resumeID: ID
+  Address: Address @connection
+}
+
+type Experience @model @auth(rules: [{allow: public}]) @key(name: "byResume", fields: ["resumeID"]) {
+  id: ID!
+  company: String
+  job_title: String
+  years: String
+  descriptions: [String]
+  resumeID: ID
+  Address: Address @connection
+  techstacks: String
+}
+
+type Project @model @auth(rules: [{allow: public}]) @key(name: "byResume", fields: ["resumeID"]) {
+  id: ID!
+  title: String
+  descriptions: [String]
+  years: String
+  github: String
+  image: String
+  resumeID: ID
+  Address: Address @connection
+  techstacks: String
+}
+
+type Address @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  street: String
+  city: String
+  state: String
+  country: String
+  zip: String
+}
+
+type Resume @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  firstname: String
+  lastname: String
+  phone: String
+  email: String
+  profileimage: String
+  resume_download_link: String
+  github: String
+  linkedin: String
+  Skills: [Skill] @connection(keyName: "byResume", fields: ["id"])
+  Educations: [Education] @connection(keyName: "byResume", fields: ["id"])
+  Experiences: [Experience] @connection(keyName: "byResume", fields: ["id"])
+  Projects: [Project] @connection(keyName: "byResume", fields: ["id"])
+  Address: Address @connection
+  description: String
+}
+ 
