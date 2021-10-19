@@ -52,10 +52,7 @@ class App extends Component {
       }
       return resume
     }))
-    this.setState({ resumeArr: resumesFromAPI})
-    const logger = new Logger("this.state.resumeArr")
-    logger.error(this.state.resumeArr[0])
-    
+    this.setState({ resumeArr: resumesFromAPI})        
   }
 
   componentDidMount() {
