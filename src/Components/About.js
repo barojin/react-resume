@@ -4,17 +4,12 @@ import Fade from "react-reveal";
 class About extends Component {
   render() {
     if (!this.props.data) return null;
-
-    const name = this.props.data.name;
-    const profilepic = "images/" + this.props.data.image;
-    const bio = this.props.data.bio;
-    const street = this.props.data.address.street;
-    const city = this.props.data.address.city;
-    const state = this.props.data.address.state;
-    const zip = this.props.data.address.zip;
+    const profilepic = "images/" + this.props.data.profileimage;
+    const bio = this.props.data.description;
+    const address = this.props.data.Address;
     const phone = this.props.data.phone;
     const email = this.props.data.email;
-    const resumeDownload = this.props.data.resumedownload;
+    const resumeDownload = this.props.data.resume_download_link
 
     return (
       <section id="about">
@@ -24,7 +19,7 @@ class About extends Component {
               <img
                 className="profile-pic"
                 src={profilepic}
-                alt="Nordic Giant Profile Pic"
+                alt="Hojin Nam Profile Pic"
               />
             </div>
             <div className="nine columns main-col">
@@ -34,12 +29,12 @@ class About extends Component {
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
                   <p className="address">
-                    <span>{name}</span>
+                    <span>{this.props.data.firstname} {this.props.data.lastname}</span>
                     <br />
                     <span>
-                      {street}
+                      {address.street}
                       <br />
-                      {city} {state}, {zip}
+                      {address.zip} {address.city} {address.state} {address.country}
                     </span>
                     <br />
                     <span>{phone}</span>
