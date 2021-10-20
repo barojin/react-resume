@@ -55,6 +55,12 @@ class Header extends Component {
         <div className="row banner">
           <div className="banner-text">
             <Fade bottom>
+            <img
+              className="profile-pic"
+              src="images/mainpic.JPG"
+              alt="Hojin Nam"
+              width="50%"
+            />
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
             <Fade bottom duration={1200}>
