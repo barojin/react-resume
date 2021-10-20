@@ -63,3 +63,7 @@ and modify it to add the backend section to the amplify.yml
 - private/log1.text
 - Need to pull the data from the backend. This error caused since I pushed the data to the backend <br>
 and didn't pull the data from the cloud storage that unsync data between them
+
+3.
+- The files in /public/images are not deployed.
+- There are files uploaded in github repo but not deployed to Amplify.
