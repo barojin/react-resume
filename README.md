@@ -2,7 +2,7 @@
 - Frontend: React.js
 - Backend: GraphQL, DynamoDB, AWS Amplify
 - Repository: Github
-- template cloned https://github.com/nordicgiant2/react-nice-resume and changed a design slightly
+- Template cloned https://github.com/nordicgiant2/react-nice-resume and changed a design slightly
 
 # Developemnt logs
 ## 10182021
@@ -41,7 +41,7 @@
 and modify it to add the backend section to the amplify.yml
 
 # Error logs
-1.
+## 1.
 ### Issue
 ```
 ...
@@ -55,7 +55,7 @@ and modify it to add the backend section to the amplify.yml
 
 - ref: https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-three/?e=gs2020&p=build-a-react-app-two
 
-2.
+## 2.
 ### Issue
 ```
 2021-10-19T22:23:18.665Z [WARNING]: ✖ An error occurred when pushing the resources to the cloud
@@ -68,7 +68,7 @@ and modify it to add the backend section to the amplify.yml
 - Need to pull the data from the backend. This error caused since I pushed the data to the backend <br>
 and didn't pull the data from the cloud storage that unsync data between them
 
-3.
+## 3.
 ### Issue
 - The files in /public/images are not deployed.
 - There are files uploaded in github repo but not deployed to Amplify.
