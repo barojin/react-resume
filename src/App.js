@@ -10,6 +10,8 @@ import Contact from "./Components/Contact";
 import { getResume } from './graphql/queries';
 import { API, Storage,  graphqlOperation } from 'aws-amplify';
 
+import ContactUs from "./Components/contactForm";
+
 
 class App extends Component {
   constructor(props) {
@@ -50,6 +52,7 @@ class App extends Component {
         <About  data={this.state.resume} />
         <Work experiences={this.state.experiences} educations={this.state.educations} projects={this.state.projects} skills={this.state.skills} />
         {/*<Contact data={this.state.resume} />*/}
+        <ContactUs />
         <Footer />
       </div>
     );
