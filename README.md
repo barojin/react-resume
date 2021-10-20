@@ -1,4 +1,10 @@
-# Reproduce it in Oct 18 2021
+# Portfoilo website
+- Frontend: React.js
+- Backend: GraphQL, DynamoDB, AWS Amplify
+- Repository: Github
+- template cloned https://github.com/nordicgiant2/react-nice-resume and changed a design slightly
+
+# Developemnt logs
 ## 10182021
 ### configure and pull
 - If you don't have a aws-amplify/cli on your Mac, type below command on Terminal.
@@ -29,6 +35,11 @@
 ### Link Admin UI with the current application in Amplify CLI
 - https://docs.amplify.aws/console/adminui/extend-cli/#to-configure-the-amplify-cli-for-use-without-an-aws-account
 
+## 10192021
+### set up CI/CD of the front end and backend
+- On Amplify Console inside AWS, From the navigation sidebar, App settings > Build settings <br>
+and modify it to add the backend section to the amplify.yml
+
 # Error logs
 1.
 ```
@@ -42,6 +53,13 @@
 
 - ref: https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-three/?e=gs2020&p=build-a-react-app-two
 
-
-### Reference
-https://fontawesome.com/v5.15/how-to-use/on-the-web/using-with/react
+2.
+```
+2021-10-19T22:23:18.665Z [WARNING]: ✖ An error occurred when pushing the resources to the cloud
+2021-10-19T22:23:18.666Z [WARNING]: ✖ There was an error initializing your environment.
+2021-10-19T22:23:18.763Z [INFO]: [0mGraphQLError: Syntax Error: Unexpected <EOF>[0m
+                                 [0m    at syntaxError (/root/.nvm/versions/node/v12.21.0/lib/node_modules/@aws-amplify/cli/node_modules/graphql/error/syntaxError.js:15:10)[0m
+```
+- private/log1.text
+- Need to pull the data from the backend. This error caused since I pushed the data to the backend <br>
+and didn't pull the data from the cloud storage that unsync data between them
