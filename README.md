@@ -73,4 +73,4 @@ and didn't pull the data from the cloud storage that unsync data between them
 - The files in /public/images are not deployed.
 - There are files uploaded in github repo but not deployed to Amplify.
 ### Solution
-- Downsiz the image file
+- Downsiz the image file from 8MB to 512KB
