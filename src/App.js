@@ -1,75 +1,56 @@
 import React, { Component } from "react";
 import ReactGA from "react-ga";
-import $ from "jquery";
 import "./App.css";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
-import ResumeComponent from "./Components/Resume";
+import Work from "./Components/Work";
 import Contact from "./Components/Contact";
-import Portfolio from "./Components/Portfolio";
 
-
-import { listResumes, listExperiences } from './graphql/queries';
-import { Logger } from 'aws-amplify';
-import { API, Storage } from 'aws-amplify';
+import { getResume } from './graphql/queries';
+import { API, Storage,  graphqlOperation } from 'aws-amplify';
 
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      foo: "bar",
-      resumeData: {},
-      resumeArr: []
+      resume: {},
+      experiences: [],
+      projects: [],
+      educations: [],
+      skills: []
     };
     ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
   }
 
-  getResumeData() {
-    $.ajax({
-      url: "./resumeData.json",
-      dataType: "json",
-      cache: false,
-      success: function(data) {
-        this.setState({ resumeData: data });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.log(err);
-        alert(err);
-      }
-    });
-  }
-
-  async getResumes() {
-    const apiData = await API.graphql({ query: listResumes });
-    const resumesFromAPI = apiData.data.listResumes.items;
-    await Promise.all(resumesFromAPI.map(async resume =>{
-      if (resume.profileimage){
-        const image = await Storage.get(resume.profileimage);
-        resume.profileimage = image
-      }
-      return resume
-    }))
-    this.setState({ resumeArr: resumesFromAPI})        
+  async getResume(){
+    const apiData = await API.graphql(graphqlOperation(getResume, { id: '155d55df-6783-4683-8af7-0a8cff29346c' }));
+    if (apiData.data.getResume.profileimage){
+      const image = await Storage.get(apiData.data.getResume.profileimage);
+      apiData.data.getResume.profileimage = image;
+    }
+    this.setState({resume: apiData.data.getResume});
+    this.setState({experiences: apiData.data.getResume.Experiences.items});
+    this.setState({educations: apiData.data.getResume.Educations.items});
+    this.setState({projects: apiData.data.getResume.Projects.items});
+    this.setState({skills: apiData.data.getResume.Skills.items});
   }
 
   componentDidMount() {
-    this.getResumeData();
-    this.getResumes();
-
+    this.getResume();
   }
 
   render() {
     return (
       <div className="App">
-        <Header data={this.state.resumeArr[0]} />
-        <About data={this.state.resumeArr[0]} />
-        <ResumeComponent data={this.state.resumeData.resume} />
-        <Portfolio data={this.state.resumeData.portfolio} />
-        <Contact data={this.state.resumeData.main} />
-        <Footer data={this.state.resumeData.main} />
+
+        <Header data={this.state.resume} />
+        <About  data={this.state.resume} />
+        <Work experiences={this.state.experiences} educations={this.state.educations} projects={this.state.projects} skills={this.state.skills} />
+        {/*<Contact data={this.state.resume} />*/}
+        <Footer />
       </div>
     );
   }

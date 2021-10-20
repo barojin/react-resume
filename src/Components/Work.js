@@ -12,10 +12,9 @@ class Resume extends Component {
   }
 
   render() {
-    if (!this.props.data) return null;
+    if (!this.props) return null;
 
-    const skillmessage = this.props.data.skillmessage;
-    const education = this.props.data.education.map(function (education) {
+    const edu = this.props.educations.map(education => {
       return (
         <div key={education.school}>
           <h3>{education.school}</h3>
@@ -23,33 +22,50 @@ class Resume extends Component {
             {education.degree} <span>&bull;</span>
             <em className="date">{education.graduated}</em>
           </p>
-          <p>{education.description}</p>
+          <p>{education.courses}</p>
         </div>
       );
     });
 
-    const work = this.props.data.work.map(function (work) {
+    const exp = this.props.experiences.map(experience => {
       return (
-        <div key={work.company}>
-          <h3>{work.company}</h3>
+        <div key={experience.company}>
+          <h3>{experience.company}</h3>
           <p className="info">
-            {work.title}
-            <span>&bull;</span> <em className="date">{work.years}</em>
+            {experience.job_title}
+            <span>&bull;</span> <em className="date">{experience.years}</em>
           </p>
-          <p>{work.description}</p>
+          {experience.descriptions.map((x) => <li> {x} </li>)}
+          <p className="info">{"[" + experience.techstacks + "]"}</p>
+          <br/>
         </div>
       );
     });
 
-    const skills = this.props.data.skills.map((skills) => {
-      const backgroundColor = this.getRandomColor();
-      const className = "bar-expand " + skills.name.toLowerCase();
-      const width = skills.level;
+    const projects = this.props.projects.map(p => {
+      return (
+        <div key={p.title}>
+          <h3>
+          {p.github && <a href={p.github} className="btn"><i className="fa fa-github"></i></a>}
+           {} {p.title}
+          </h3>
+          {p.descriptions.map((x) => <li> {x} </li>)}
+          <p className="info">{"[" + p.techstacks + "]"}</p>
+          <br/>
+        </div>
+      );
+    });
+
+    const sk = this.props.skills.map((skill) => {
+      const backgroundColor = "#FFD700";
+      const color = "#FFFFFF";
+      const className = "bar-expand " + skill.name.toLowerCase();
+      const width = skill.level;
 
       return (
-        <li key={skills.name}>
+        <li key={skill.name}>
           <span style={{ width, backgroundColor }} className={className}></span>
-          <em>{skills.name}</em>
+          <em style={{ color }}>{skill.name}</em>
         </li>
       );
     });
@@ -66,7 +82,7 @@ class Resume extends Component {
 
             <div className="nine columns main-col">
               <div className="row item">
-                <div className="twelve columns">{education}</div>
+                <div className="twelve columns">{edu}</div>
               </div>
             </div>
           </div>
@@ -76,11 +92,22 @@ class Resume extends Component {
           <div className="row work">
             <div className="three columns header-col">
               <h1>
-                <span>Work</span>
+                <span>Experience</span>
+
               </h1>
             </div>
+            <div className="nine columns main-col">{exp}</div>
+          </div>
+        </Slide>
 
-            <div className="nine columns main-col">{work}</div>
+        <Slide left duration={1300}>
+          <div className="row work">
+            <div className="three columns header-col">
+              <h1>
+                <span>Project</span>
+              </h1>
+            </div>
+            <div className="nine columns main-col">{projects}</div>
           </div>
         </Slide>
 
@@ -88,15 +115,13 @@ class Resume extends Component {
           <div className="row skill">
             <div className="three columns header-col">
               <h1>
-                <span>Skills</span>
+                <span>Skill</span>
               </h1>
             </div>
 
             <div className="nine columns main-col">
-              <p>{skillmessage}</p>
-
               <div className="bars">
-                <ul className="skills">{skills}</ul>
+                <ul className="skills">{sk}</ul>
               </div>
             </div>
           </div>
@@ -104,6 +129,7 @@ class Resume extends Component {
       </section>
     );
   }
+
 }
 
 export default Resume;

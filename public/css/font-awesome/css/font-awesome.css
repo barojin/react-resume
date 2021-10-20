@@ -636,6 +636,7 @@
 }
 .fa-github:before {
   content: "\f09b";
+  color: gold;
 }
 .fa-unlock:before {
   content: "\f09c";

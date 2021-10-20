@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
 
+
 class About extends Component {
   render() {
     if (!this.props.data) return null;
-    const profilepic = "images/" + this.props.data.profileimage;
+    const profilepic = "images/profilepic.png";
     const bio = this.props.data.description;
     const address = this.props.data.Address;
     const phone = this.props.data.phone;
@@ -31,11 +32,13 @@ class About extends Component {
                   <p className="address">
                     <span>{this.props.data.firstname} {this.props.data.lastname}</span>
                     <br />
+
                     <span>
-                      {address.street}
+                      {address?.street}
                       <br />
-                      {address.zip} {address.city} {address.state} {address.country}
+                      {address?.city} {address?.state} {address?.country}
                     </span>
+
                     <br />
                     <span>{phone}</span>
                     <br />
