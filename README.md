@@ -74,3 +74,12 @@ and didn't pull the data from the cloud storage that unsync data between them
 - There are files uploaded in github repo but not deployed to Amplify.
 ### Solution
 - Downsiz the image file from 8MB to 512KB
+
+## 4.
+### Issue
+- emailjs works on local but didn't on server
+### Suspect
+- yarn might not work with emailjs, because .yml file for docker using the yarn not npm.
+- There will be a email service on AWS in a serverless lambda way
+
+### Solution

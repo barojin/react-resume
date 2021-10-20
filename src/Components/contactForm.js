@@ -29,7 +29,8 @@ export default function ContactUs() {
           </div>
 
           <div className="ten columns">
-            <p className="lead">To Hojin Nam</p>
+          {/*todo To Hojin Nam */}
+            <p className="lead">Email SERVICE IS UNDER CONSTRUCTION</p>
           </div>
         </div>
       </Fade>
@@ -92,8 +93,7 @@ export default function ContactUs() {
                 </div>
 
                 <div>
-                <button className="submit">Submit</button>
-
+                {/*TODO <button className="submit">Submit</button> */}                
                   <span id="image-loader">
                     <img alt="" src="images/loader.gif" />
                   </span>
