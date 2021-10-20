@@ -42,6 +42,7 @@ and modify it to add the backend section to the amplify.yml
 
 # Error logs
 1.
+### Issue
 ```
 ...
 2021-10-19T18:04:33.716Z [INFO]: Failed to compile.
@@ -49,21 +50,27 @@ and modify it to add the backend section to the amplify.yml
                                  Cannot find file './aws-exports' in './src'.
 ...
 ```
+### Solution
 - Need to set up CI/CD of the front end and backend
 
 - ref: https://aws.amazon.com/getting-started/hands-on/build-react-app-amplify-graphql/module-three/?e=gs2020&p=build-a-react-app-two
 
 2.
+### Issue
 ```
 2021-10-19T22:23:18.665Z [WARNING]: ✖ An error occurred when pushing the resources to the cloud
 2021-10-19T22:23:18.666Z [WARNING]: ✖ There was an error initializing your environment.
 2021-10-19T22:23:18.763Z [INFO]: [0mGraphQLError: Syntax Error: Unexpected <EOF>[0m
                                  [0m    at syntaxError (/root/.nvm/versions/node/v12.21.0/lib/node_modules/@aws-amplify/cli/node_modules/graphql/error/syntaxError.js:15:10)[0m
 ```
+### Solution
 - private/log1.text
 - Need to pull the data from the backend. This error caused since I pushed the data to the backend <br>
 and didn't pull the data from the cloud storage that unsync data between them
 
 3.
+### Issue
 - The files in /public/images are not deployed.
 - There are files uploaded in github repo but not deployed to Amplify.
+### Solution
+- Downsiz the image file
