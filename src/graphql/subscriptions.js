@@ -8,9 +8,6 @@ export const onCreateSkill = /* GraphQL */ `
       name
       level
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -23,9 +20,6 @@ export const onUpdateSkill = /* GraphQL */ `
       name
       level
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -38,9 +32,6 @@ export const onDeleteSkill = /* GraphQL */ `
       name
       level
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -55,9 +46,6 @@ export const onCreateEducation = /* GraphQL */ `
       graduated_date
       courses
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -67,9 +55,6 @@ export const onCreateEducation = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -85,9 +70,6 @@ export const onUpdateEducation = /* GraphQL */ `
       graduated_date
       courses
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -97,9 +79,6 @@ export const onUpdateEducation = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -115,9 +94,6 @@ export const onDeleteEducation = /* GraphQL */ `
       graduated_date
       courses
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -127,9 +103,6 @@ export const onDeleteEducation = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -146,9 +119,6 @@ export const onCreateExperience = /* GraphQL */ `
       descriptions
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -158,9 +128,6 @@ export const onCreateExperience = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -177,9 +144,6 @@ export const onUpdateExperience = /* GraphQL */ `
       descriptions
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -189,9 +153,6 @@ export const onUpdateExperience = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -208,9 +169,6 @@ export const onDeleteExperience = /* GraphQL */ `
       descriptions
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -220,9 +178,6 @@ export const onDeleteExperience = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -240,9 +195,6 @@ export const onCreateProject = /* GraphQL */ `
       image
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -252,9 +204,6 @@ export const onCreateProject = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -272,9 +221,6 @@ export const onUpdateProject = /* GraphQL */ `
       image
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -284,9 +230,6 @@ export const onUpdateProject = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -304,9 +247,6 @@ export const onDeleteProject = /* GraphQL */ `
       image
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -316,9 +256,6 @@ export const onDeleteProject = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -334,9 +271,6 @@ export const onCreateAddress = /* GraphQL */ `
       state
       country
       zip
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -351,9 +285,6 @@ export const onUpdateAddress = /* GraphQL */ `
       state
       country
       zip
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -368,9 +299,6 @@ export const onDeleteAddress = /* GraphQL */ `
       state
       country
       zip
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -389,9 +317,6 @@ export const onCreateResume = /* GraphQL */ `
       github
       linkedin
       description
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Skills {
@@ -400,14 +325,10 @@ export const onCreateResume = /* GraphQL */ `
           name
           level
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Educations {
         items {
@@ -417,14 +338,10 @@ export const onCreateResume = /* GraphQL */ `
           graduated_date
           courses
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Experiences {
         items {
@@ -435,14 +352,10 @@ export const onCreateResume = /* GraphQL */ `
           descriptions
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Projects {
         items {
@@ -454,14 +367,10 @@ export const onCreateResume = /* GraphQL */ `
           image
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Address {
         id
@@ -470,9 +379,6 @@ export const onCreateResume = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -492,9 +398,6 @@ export const onUpdateResume = /* GraphQL */ `
       github
       linkedin
       description
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Skills {
@@ -503,14 +406,10 @@ export const onUpdateResume = /* GraphQL */ `
           name
           level
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Educations {
         items {
@@ -520,14 +419,10 @@ export const onUpdateResume = /* GraphQL */ `
           graduated_date
           courses
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Experiences {
         items {
@@ -538,14 +433,10 @@ export const onUpdateResume = /* GraphQL */ `
           descriptions
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Projects {
         items {
@@ -557,14 +448,10 @@ export const onUpdateResume = /* GraphQL */ `
           image
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Address {
         id
@@ -573,9 +460,6 @@ export const onUpdateResume = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -595,9 +479,6 @@ export const onDeleteResume = /* GraphQL */ `
       github
       linkedin
       description
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Skills {
@@ -606,14 +487,10 @@ export const onDeleteResume = /* GraphQL */ `
           name
           level
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Educations {
         items {
@@ -623,14 +500,10 @@ export const onDeleteResume = /* GraphQL */ `
           graduated_date
           courses
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Experiences {
         items {
@@ -641,14 +514,10 @@ export const onDeleteResume = /* GraphQL */ `
           descriptions
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Projects {
         items {
@@ -660,14 +529,10 @@ export const onDeleteResume = /* GraphQL */ `
           image
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Address {
         id
@@ -676,9 +541,6 @@ export const onDeleteResume = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }

@@ -11,9 +11,6 @@ export const createSkill = /* GraphQL */ `
       name
       level
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -29,9 +26,6 @@ export const updateSkill = /* GraphQL */ `
       name
       level
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -47,9 +41,6 @@ export const deleteSkill = /* GraphQL */ `
       name
       level
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -67,9 +58,6 @@ export const createEducation = /* GraphQL */ `
       graduated_date
       courses
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -79,9 +67,6 @@ export const createEducation = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -100,9 +85,6 @@ export const updateEducation = /* GraphQL */ `
       graduated_date
       courses
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -112,9 +94,6 @@ export const updateEducation = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -133,9 +112,6 @@ export const deleteEducation = /* GraphQL */ `
       graduated_date
       courses
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -145,9 +121,6 @@ export const deleteEducation = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -167,9 +140,6 @@ export const createExperience = /* GraphQL */ `
       descriptions
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -179,9 +149,6 @@ export const createExperience = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -201,9 +168,6 @@ export const updateExperience = /* GraphQL */ `
       descriptions
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -213,9 +177,6 @@ export const updateExperience = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -235,9 +196,6 @@ export const deleteExperience = /* GraphQL */ `
       descriptions
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -247,9 +205,6 @@ export const deleteExperience = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -270,9 +225,6 @@ export const createProject = /* GraphQL */ `
       image
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -282,9 +234,6 @@ export const createProject = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -305,9 +254,6 @@ export const updateProject = /* GraphQL */ `
       image
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -317,9 +263,6 @@ export const updateProject = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -340,9 +283,6 @@ export const deleteProject = /* GraphQL */ `
       image
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -352,9 +292,6 @@ export const deleteProject = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -373,9 +310,6 @@ export const createAddress = /* GraphQL */ `
       state
       country
       zip
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -393,9 +327,6 @@ export const updateAddress = /* GraphQL */ `
       state
       country
       zip
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -413,9 +344,6 @@ export const deleteAddress = /* GraphQL */ `
       state
       country
       zip
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -437,9 +365,6 @@ export const createResume = /* GraphQL */ `
       github
       linkedin
       description
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Skills {
@@ -448,14 +373,10 @@ export const createResume = /* GraphQL */ `
           name
           level
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Educations {
         items {
@@ -465,14 +386,10 @@ export const createResume = /* GraphQL */ `
           graduated_date
           courses
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Experiences {
         items {
@@ -483,14 +400,10 @@ export const createResume = /* GraphQL */ `
           descriptions
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Projects {
         items {
@@ -502,14 +415,10 @@ export const createResume = /* GraphQL */ `
           image
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Address {
         id
@@ -518,9 +427,6 @@ export const createResume = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -543,9 +449,6 @@ export const updateResume = /* GraphQL */ `
       github
       linkedin
       description
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Skills {
@@ -554,14 +457,10 @@ export const updateResume = /* GraphQL */ `
           name
           level
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Educations {
         items {
@@ -571,14 +470,10 @@ export const updateResume = /* GraphQL */ `
           graduated_date
           courses
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Experiences {
         items {
@@ -589,14 +484,10 @@ export const updateResume = /* GraphQL */ `
           descriptions
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Projects {
         items {
@@ -608,14 +499,10 @@ export const updateResume = /* GraphQL */ `
           image
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Address {
         id
@@ -624,9 +511,6 @@ export const updateResume = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -649,9 +533,6 @@ export const deleteResume = /* GraphQL */ `
       github
       linkedin
       description
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Skills {
@@ -660,14 +541,10 @@ export const deleteResume = /* GraphQL */ `
           name
           level
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Educations {
         items {
@@ -677,14 +554,10 @@ export const deleteResume = /* GraphQL */ `
           graduated_date
           courses
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Experiences {
         items {
@@ -695,14 +568,10 @@ export const deleteResume = /* GraphQL */ `
           descriptions
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Projects {
         items {
@@ -714,14 +583,10 @@ export const deleteResume = /* GraphQL */ `
           image
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Address {
         id
@@ -730,9 +595,6 @@ export const deleteResume = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }

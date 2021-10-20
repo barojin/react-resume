@@ -8,9 +8,6 @@ export const getSkill = /* GraphQL */ `
       name
       level
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -28,43 +25,10 @@ export const listSkills = /* GraphQL */ `
         name
         level
         resumeID
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncSkills = /* GraphQL */ `
-  query SyncSkills(
-    $filter: ModelSkillFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncSkills(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        name
-        level
-        resumeID
-        _version
-        _deleted
-        _lastChangedAt
-        createdAt
-        updatedAt
-      }
-      nextToken
-      startedAt
     }
   }
 `;
@@ -77,9 +41,6 @@ export const getEducation = /* GraphQL */ `
       graduated_date
       courses
       resumeID
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -89,9 +50,6 @@ export const getEducation = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -112,9 +70,6 @@ export const listEducations = /* GraphQL */ `
         graduated_date
         courses
         resumeID
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
         Address {
@@ -124,59 +79,11 @@ export const listEducations = /* GraphQL */ `
           state
           country
           zip
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncEducations = /* GraphQL */ `
-  query SyncEducations(
-    $filter: ModelEducationFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncEducations(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        school
-        degree
-        graduated_date
-        courses
-        resumeID
-        _version
-        _deleted
-        _lastChangedAt
-        createdAt
-        updatedAt
-        Address {
-          id
-          street
-          city
-          state
-          country
-          zip
-          _version
-          _deleted
-          _lastChangedAt
-          createdAt
-          updatedAt
-        }
-      }
-      nextToken
-      startedAt
     }
   }
 `;
@@ -190,9 +97,6 @@ export const getExperience = /* GraphQL */ `
       descriptions
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -202,9 +106,6 @@ export const getExperience = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -226,9 +127,6 @@ export const listExperiences = /* GraphQL */ `
         descriptions
         resumeID
         techstacks
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
         Address {
@@ -238,60 +136,11 @@ export const listExperiences = /* GraphQL */ `
           state
           country
           zip
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncExperiences = /* GraphQL */ `
-  query SyncExperiences(
-    $filter: ModelExperienceFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncExperiences(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        company
-        job_title
-        years
-        descriptions
-        resumeID
-        techstacks
-        _version
-        _deleted
-        _lastChangedAt
-        createdAt
-        updatedAt
-        Address {
-          id
-          street
-          city
-          state
-          country
-          zip
-          _version
-          _deleted
-          _lastChangedAt
-          createdAt
-          updatedAt
-        }
-      }
-      nextToken
-      startedAt
     }
   }
 `;
@@ -306,9 +155,6 @@ export const getProject = /* GraphQL */ `
       image
       resumeID
       techstacks
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Address {
@@ -318,9 +164,6 @@ export const getProject = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -343,9 +186,6 @@ export const listProjects = /* GraphQL */ `
         image
         resumeID
         techstacks
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
         Address {
@@ -355,61 +195,11 @@ export const listProjects = /* GraphQL */ `
           state
           country
           zip
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncProjects = /* GraphQL */ `
-  query SyncProjects(
-    $filter: ModelProjectFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncProjects(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        title
-        descriptions
-        years
-        github
-        image
-        resumeID
-        techstacks
-        _version
-        _deleted
-        _lastChangedAt
-        createdAt
-        updatedAt
-        Address {
-          id
-          street
-          city
-          state
-          country
-          zip
-          _version
-          _deleted
-          _lastChangedAt
-          createdAt
-          updatedAt
-        }
-      }
-      nextToken
-      startedAt
     }
   }
 `;
@@ -422,9 +212,6 @@ export const getAddress = /* GraphQL */ `
       state
       country
       zip
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
     }
@@ -444,45 +231,10 @@ export const listAddresss = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncAddresses = /* GraphQL */ `
-  query SyncAddresses(
-    $filter: ModelAddressFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncAddresses(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        street
-        city
-        state
-        country
-        zip
-        _version
-        _deleted
-        _lastChangedAt
-        createdAt
-        updatedAt
-      }
-      nextToken
-      startedAt
     }
   }
 `;
@@ -499,9 +251,6 @@ export const getResume = /* GraphQL */ `
       github
       linkedin
       description
-      _version
-      _deleted
-      _lastChangedAt
       createdAt
       updatedAt
       Skills {
@@ -510,14 +259,10 @@ export const getResume = /* GraphQL */ `
           name
           level
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Educations {
         items {
@@ -527,14 +272,10 @@ export const getResume = /* GraphQL */ `
           graduated_date
           courses
           resumeID
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Experiences {
         items {
@@ -545,14 +286,10 @@ export const getResume = /* GraphQL */ `
           descriptions
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Projects {
         items {
@@ -564,14 +301,10 @@ export const getResume = /* GraphQL */ `
           image
           resumeID
           techstacks
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
         nextToken
-        startedAt
       }
       Address {
         id
@@ -580,9 +313,6 @@ export const getResume = /* GraphQL */ `
         state
         country
         zip
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
       }
@@ -607,26 +337,19 @@ export const listResumes = /* GraphQL */ `
         github
         linkedin
         description
-        _version
-        _deleted
-        _lastChangedAt
         createdAt
         updatedAt
         Skills {
           nextToken
-          startedAt
         }
         Educations {
           nextToken
-          startedAt
         }
         Experiences {
           nextToken
-          startedAt
         }
         Projects {
           nextToken
-          startedAt
         }
         Address {
           id
@@ -635,79 +358,11 @@ export const listResumes = /* GraphQL */ `
           state
           country
           zip
-          _version
-          _deleted
-          _lastChangedAt
           createdAt
           updatedAt
         }
       }
       nextToken
-      startedAt
-    }
-  }
-`;
-export const syncResumes = /* GraphQL */ `
-  query SyncResumes(
-    $filter: ModelResumeFilterInput
-    $limit: Int
-    $nextToken: String
-    $lastSync: AWSTimestamp
-  ) {
-    syncResumes(
-      filter: $filter
-      limit: $limit
-      nextToken: $nextToken
-      lastSync: $lastSync
-    ) {
-      items {
-        id
-        firstname
-        lastname
-        phone
-        email
-        profileimage
-        resume_download_link
-        github
-        linkedin
-        description
-        _version
-        _deleted
-        _lastChangedAt
-        createdAt
-        updatedAt
-        Skills {
-          nextToken
-          startedAt
-        }
-        Educations {
-          nextToken
-          startedAt
-        }
-        Experiences {
-          nextToken
-          startedAt
-        }
-        Projects {
-          nextToken
-          startedAt
-        }
-        Address {
-          id
-          street
-          city
-          state
-          country
-          zip
-          _version
-          _deleted
-          _lastChangedAt
-          createdAt
-          updatedAt
-        }
-      }
-      nextToken
-      startedAt
     }
   }
 `;

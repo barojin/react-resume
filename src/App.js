@@ -9,6 +9,7 @@ import Contact from "./Components/Contact";
 
 import { getResume } from './graphql/queries';
 import { API, Storage,  graphqlOperation } from 'aws-amplify';
+import { Logger} from 'aws-amplify';
 
 
 class App extends Component {
@@ -36,6 +37,9 @@ class App extends Component {
     this.setState({educations: apiData.data.getResume.Educations.items});
     this.setState({projects: apiData.data.getResume.Projects.items});
     this.setState({skills: apiData.data.getResume.Skills.items});
+    const log = new Logger("App.js data.getResume");
+    log.error(apiData);
+
   }
 
   componentDidMount() {
