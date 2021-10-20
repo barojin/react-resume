@@ -5,7 +5,6 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Work from "./Components/Work";
-import Contact from "./Components/Contact";
 
 import { getResume } from './graphql/queries';
 import { API, Storage,  graphqlOperation } from 'aws-amplify';
@@ -51,7 +50,6 @@ class App extends Component {
         <Header data={this.state.resume} />
         <About  data={this.state.resume} />
         <Work experiences={this.state.experiences} educations={this.state.educations} projects={this.state.projects} skills={this.state.skills} />
-        {/*<Contact data={this.state.resume} />*/}
         <ContactUs />
         <Footer />
       </div>

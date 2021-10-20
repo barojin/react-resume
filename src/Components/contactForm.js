@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { Fade, Slide } from "react-reveal";
 
+
 export default function ContactUs() {
   const form = useRef();
 
@@ -10,11 +11,11 @@ export default function ContactUs() {
 
     emailjs.sendForm('service_xlowzzv', 'template_4n9kxre', form.current, 'user_DbzniXj9XaflmiaGI4Hoj')
       .then((result) => {
-          console.log(result.text);
+          alert(result.text + "! Your email sent successfully");
+          e.target.reset()
       }, (error) => {
-          console.log(error.text);
+          alert(error.text);
       });
-      e.target.reset()
   };
 
   return (
@@ -91,7 +92,8 @@ export default function ContactUs() {
                 </div>
 
                 <div>
-                <input type="submit" value="Send" />
+                <button className="submit">Submit</button>
+
                   <span id="image-loader">
                     <img alt="" src="images/loader.gif" />
                   </span>
