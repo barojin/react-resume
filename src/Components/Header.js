@@ -57,7 +57,7 @@ class Header extends Component {
             <Fade bottom>
             <img
               className="profile-pic"
-              src="images/mainpic.JPG"
+              src="images/mainpic"
               alt="Hojin Nam"
               width="50%"
             />
