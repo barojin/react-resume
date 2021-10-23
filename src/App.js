@@ -46,7 +46,6 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <Header data={this.state.resume} />
         <About  data={this.state.resume} />
         <Work experiences={this.state.experiences} educations={this.state.educations} projects={this.state.projects} skills={this.state.skills} />

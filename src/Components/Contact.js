@@ -4,9 +4,7 @@ import { Fade, Slide } from "react-reveal";
 class Contact extends Component {
   render() {
     if (!this.props.data) return null;
-
-    const name = this.props.data.firstname + " " + this.props.data.lastname;
-    const message = "To " + name;
+    const message = "To " + this.props.data.firstname + " " + this.props.data.lastname;;
 
     return (
       <section id="contact">

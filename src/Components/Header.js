@@ -4,10 +4,6 @@ import Fade from "react-reveal";
 class Header extends Component {
   render() {
     if (!this.props.data) return null;
-    const name = this.props.data.firstname + " " +  this.props.data.lastname;
-    const description = this.props.data.description;
-    const github = this.props.data.github;
-    const linkedin = this.props.data.linkedin;
 
     return (
       <header id="home">
@@ -61,18 +57,18 @@ class Header extends Component {
               alt="Hojin Nam"
               width="50%"
             />
-              <h1 className="responsive-headline">{name}</h1>
+              <h1 className="responsive-headline">{this.props.data.firstname} {this.props.data.lastname}</h1>
             </Fade>
             <Fade bottom duration={1200}>
-              <h3>{description}.</h3>
+              <h3>{this.props.data.description}.</h3>
             </Fade>
             <hr />
             <Fade bottom duration={2000}>
               <ul className="social">
-                <a href={linkedin} className="btn">
+                <a href={this.props.data.linkedin} className="btn">
                   <i className="fa fa-linkedin"></i>
                 </a>
-                <a href={github} className="btn">
+                <a href={this.props.data.github} className="btn">
                   <i className="fa fa-github"></i>
                 </a>
               </ul>

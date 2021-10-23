@@ -6,11 +6,7 @@ class About extends Component {
   render() {
     if (!this.props.data) return null;
     const profilepic = "images/profilepic.png";
-    const bio = this.props.data.description;
     const address = this.props.data.Address;
-    const phone = this.props.data.phone;
-    const email = this.props.data.email;
-    const resumeDownload = this.props.data.resume_download_link
 
     return (
       <section id="about">
@@ -25,7 +21,7 @@ class About extends Component {
             </div>
             <div className="nine columns main-col">
               <h2>About Me</h2>
-              <p>{bio}</p>
+              <p>{this.props.data.description}</p>
               <div className="row">
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
@@ -40,14 +36,14 @@ class About extends Component {
                     </span>
 
                     <br />
-                    <span>{phone}</span>
+                    <span>{this.props.data.phone}</span>
                     <br />
-                    <span>{email}</span>
+                    <span>{this.props.data.email}</span>
                   </p>
                 </div>
                 <div className="columns download">
                   <p>
-                    <a href={resumeDownload} className="button">
+                    <a href={this.props.data.resume_download_link} className="button">
                       <i className="fa fa-download"></i>Download Resume
                     </a>
                   </p>
